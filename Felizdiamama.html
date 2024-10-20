@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes Interactivas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .title {
+            font-size: 2.5em; /* Tamaño del título */
+            color: #ff69b4; /* Color rosa brillante */
+            margin: 20px 0; /* Espaciado arriba y abajo */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto */
+        }
+
+        .image-container {
+            margin: 20px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 100%; /* Cambiar a 100% para responsividad */
+            max-width: 300px; /* Establecer un ancho máximo */
+            height: auto;
+            filter: blur(15px); /* Efecto de imagen borrosa */
+            transition: filter 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+            cursor: pointer;
+        }
+
+        .image-container img.clear {
+            filter: blur(0); /* Eliminar el desenfoque cuando se hace clic */
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05); /* Aumentar ligeramente la imagen al pasar el mouse */
+        }
+
+        .message {
+            margin-top: 20px; /* Espacio entre el mensaje y el encabezado */
+            font-size: 1.2em; /* Tamaño de fuente del mensaje */
+            color: #555; /* Color del mensaje */
+        }
+
+        .footer {
+            margin-top: 30px; /* Espaciado superior para el pie de página */
+            font-size: 1.5em; /* Tamaño del texto */
+            color: #333; /* Color del texto */
+            font-weight: bold; /* Negrita */
+        }
+    </style>
+
+    <script>
+        function revealImage(img) {
+            img.classList.toggle('clear'); // Alterna entre borroso y claro al hacer clic
+        }
+    </script>
+</head>
+<body>
+
+    <h1 class="title">Feliz Día Mamá</h1>
+    <p class="message">Gracias por ser mi guía, mi fuerza y mi mayor apoyo en cada paso que doy. ¡Te quiero, mamá!</p>
+
+    <div class="image-container">
+        <img src="familia.jpg" alt="Descripción detallada de la imagen 1" onclick="revealImage(this)">
+    </div>
+
+    <div class="image-container">
+        <img src="familia2.jpg" alt="Descripción detallada de la imagen 2" onclick="revealImage(this)">
+    </div>
+
+    <div class="image-container">
+        <img src="familia3.jpg" alt="Descripción detallada de la imagen 3" onclick="revealImage(this)">
+    </div>
+
+    <div class="image-container">
+        <img src="familia4.jpg" alt="Descripción detallada de la imagen 4" onclick="revealImage(this)">
+    </div>
+
+    <p class="footer">Son los deseos de Valen y Gus</p>
+
+</body>
+</html>
